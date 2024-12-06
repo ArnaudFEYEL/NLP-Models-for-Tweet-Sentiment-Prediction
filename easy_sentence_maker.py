@@ -2,7 +2,7 @@ import re
 import pandas as pd 
 
 # Load the dataset
-path = "/home/arnaud/M2_IA/LMM_seminary/tableau_excel_csv.csv"
+path = "path/to/data.csv"
 
 pd_data = pd.read_csv(path, sep=";", skipinitialspace=True)
 
@@ -47,6 +47,3 @@ df['tweet_text'] = df['tweet_text'].str.replace(r'[^a-zA-Z\s]', '', regex=True)
 
 # Save the updated dataframe to a new CSV
 df.to_csv("simplified_tableau_excel_csv.csv", index=False)
-
-# Print a preview of the updated dataframe
-print(df.head())

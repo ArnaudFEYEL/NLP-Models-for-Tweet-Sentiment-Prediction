@@ -4,12 +4,12 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, confusion_matrix
 
 # Load the dataset
-path = "/home/arnaud/M2_IA/LMM_seminary/easy_sentence/simplified_tableau_excel_csv.csv"
+path = "path/to/simplified_data.csv"
 
 df = pd.read_csv(path, sep = ",")
 
 # Load the dataset
-path_original = "/home/arnaud/M2_IA/LMM_seminary/tableau_excel_csv.csv"
+path_original = "path/to/original_data.csv"
 
 pd_data = pd.read_csv(path_original, sep = ";", skipinitialspace=True)
 

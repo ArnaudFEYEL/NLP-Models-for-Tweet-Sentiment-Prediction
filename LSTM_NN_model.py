@@ -12,10 +12,10 @@ from keras.utils import to_categorical
 from sklearn.metrics import confusion_matrix
 
 # Load the datasets
-path = "/home/arnaud/M2_IA/LMM_seminary/training_on_easy_sentence/simplified_data.csv"
+path = "path/to/simplified_data.csv"
 df = pd.read_csv(path, sep = ",") 
 
-path_original = "/home/arnaud/M2_IA/LMM_seminary/training_on_easy_sentence/original_data.csv"
+path_original = "path/to/original_data.csv"
 df_original = pd.read_csv(path_original, sep = ";")
 
 def replace_sentiment_labels(df):
@@ -89,7 +89,7 @@ lstm_loss_original, lstm_accuracy_original = lstm_model.evaluate(X_test_original
 print(f"LSTM Model Accuracy Original data: {lstm_accuracy_original * 100:.2f}%")
 
 # Print and save CBOW Model Accuracy
-output_file = "LTMS_analysis_results_simplified_dataset.txt"
+output_file = "LSTM_analysis_results_simplified_dataset.txt"
 with open(output_file, 'w') as file:
     ltsm_accuracy_text = f"LTMS Model Accuracy: {lstm_accuracy * 100:.2f}%\n"
     print(ltsm_accuracy_text.strip())
@@ -130,14 +130,14 @@ with open(output_file, 'w') as file:
 
     # Convert the wrong predictions to a DataFrame and save to CSV
     wrong_predictions_df = pd.DataFrame(wrong_predictions)
-    wrong_predictions_df.to_csv('wrong_predictions_LTMS_simplified_dataset.csv', index=False)
-    wrong_predictions_text = "Wrong predictions saved to 'wrong_predictions_LTMS_simplified_dataset.csv'\n"
+    wrong_predictions_df.to_csv('wrong_predictions_LSTM_simplified_dataset.csv', index=False)
+    wrong_predictions_text = "Wrong predictions saved to 'wrong_predictions_LSTM_simplified_dataset.csv'\n"
     print(wrong_predictions_text.strip())
     file.write(wrong_predictions_text)
     
 
 # Print and save CBOW Model Accuracy
-output_file_original = "LTMS_analysis_results_original_dataset.txt"
+output_file_original = "LSTM_analysis_results_original_dataset.txt"
 with open(output_file_original, 'w') as file:
     ltsm_accuracy_text = f"LTMS Model Accuracy: {lstm_accuracy_original * 100:.2f}%\n"
     print(ltsm_accuracy_text.strip())
@@ -178,8 +178,8 @@ with open(output_file_original, 'w') as file:
 
     # Convert the wrong predictions to a DataFrame and save to CSV
     wrong_predictions_df = pd.DataFrame(wrong_predictions)
-    wrong_predictions_df.to_csv('wrong_predictions_LTMS_original_dataset.csv', index=False)
+    wrong_predictions_df.to_csv('wrong_predictions_LSTM_original_dataset.csv', index=False)
 
-    wrong_predictions_text = "Wrong predictions saved to 'wrong_predictions_LTMS_simplified_dataset.csv'\n"
+    wrong_predictions_text = "Wrong predictions saved to 'wrong_predictions_LSTM_original_dataset.csv'\n"
     print(wrong_predictions_text.strip())
     file.write(wrong_predictions_text)

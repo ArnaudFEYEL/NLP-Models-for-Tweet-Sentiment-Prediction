@@ -12,10 +12,10 @@ from keras.utils import to_categorical
 from sklearn.metrics import confusion_matrix
 
 # Load the datasets
-path = "/home/arnaud/M2_IA/LMM_seminary/training_on_easy_sentence/simplified_data.csv"
+path = "path/to/simplified_data.csv"
 df = pd.read_csv(path, sep = ",") 
 
-path_original = "/home/arnaud/M2_IA/LMM_seminary/training_on_easy_sentence/original_data.csv"
+path_original = "path/to/original_data.csv"
 df_original = pd.read_csv(path_original, sep = ";")
 
 def replace_sentiment_labels(df):

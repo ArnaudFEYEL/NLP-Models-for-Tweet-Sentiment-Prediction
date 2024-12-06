@@ -4,7 +4,7 @@ This repository contains multiple models and approaches for analyzing tweet sent
 
 ## Models Included
 1. **Lexicon-Based Analysis**:
-   - `lexicon_main.py` uses rule-based heuristics to assign sentiment based on predefined word scores.
+   - `lexicon_main.py` uses rule-based heuristics (VADER model) to assign sentiment based on predefined word scores.
 
 2. **CBOW Neural Network**:
    - `CBOW_NN_model.py` predicts word sentiments by analyzing their surrounding context using a shallow neural network.

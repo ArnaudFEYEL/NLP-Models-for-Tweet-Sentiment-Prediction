@@ -19,5 +19,7 @@ This repository contains multiple models and approaches for analyzing tweet sent
    - `lexicon_main.py` for rule-based analysis.
    - `CBOW_NN_model.py` or `LSTM_NN_model.py` for neural methods.
 
+## Outputs
+Each model saves the prediction results in .txt with a confusion matrix and the .csv file with for each line, the tweet, the model's prediction and the real sentiment.
 
 
